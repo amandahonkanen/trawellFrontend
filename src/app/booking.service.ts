@@ -8,6 +8,7 @@ import { Response } from '@angular/http';
 @Injectable()
 export class BookingService {
   BASE_URL: string = 'https://trawell.herokuapp.com/api';
+  // BASE_URL: string = 'http://localhost:3000/api';
 
   public request: Object;
   error: any;

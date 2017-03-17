@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Rx'
 @Injectable()
 export class UserService {
   BASE_URL: string = 'https://trawell.herokuapp.com/api';
+  // BASE_URL: string = 'http://localhost:3000/api';
   error: any;
 
   requests: Object;

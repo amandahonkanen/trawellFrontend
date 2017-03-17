@@ -15,6 +15,7 @@ export class SessionService implements CanActivate {
   isAuth: EventEmitter<any> = new EventEmitter();
 
 	BASE_URL: string = 'https://trawell.herokuapp.com';
+  // BASE_URL: string = 'http://localhost:3000';
 
   constructor(
     private router: Router,

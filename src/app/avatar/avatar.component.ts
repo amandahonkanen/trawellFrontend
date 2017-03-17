@@ -30,6 +30,7 @@ feedback: string;
 
       this.uploader = new FileUploader({
         url:`https://trawell.herokuapp.com/api/users/${this.paramId}`
+        // url:`http://localhost:3000/api/users/${this.paramId}`
         // authToken: `JWT ${this.session.token}`
       });
 
