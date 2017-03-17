@@ -1,0 +1,149 @@
+<div class="profile-page" *ngIf="currentUser.role === 'EXPERT'">
+  <div class="container-fluid">
+  <div class="col-xs-12 ">
+    <img class="image-circle" src="{{currentUser.image}}" />
+      <p id="username">{{ currentUser.name}}</p>
+      <p id="userDescription">{{ currentUser.description}}</p>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+<div class="col-lg-6" class = "tab-body">
+  <tabset class="tabset" [justified]="true">
+    <tab class="color" heading="About">
+      <div class="col-xs-4 ">
+      <div class="details">
+          <p><span>Age:</span> {{ currentUser.age}}</p>
+          <p><span>Interests: </span>{{ currentUser.interests}}</p>
+          <p><span>City: </span>{{ currentUser.city}}</p>
+          <p><span>Languages:</span> {{ currentUser.languages}}</p>
+
+          <div class="links">
+            <p><button [routerLink]="['avatar']">Add your Profile Picture</button></p>
+            <p><button [routerLink]="['edit']">Add your details</button></p>
+          </div>
+      </div>
+      </div>
+    </tab>
+
+    <tab class="color" heading="Bookings">
+      <div class="col-xs-4 col-xs-offset-4">
+      <div class="bookings" *ngIf="currentUser.bookings.length">
+
+              <ul>
+                  <li *ngFor="let booking of currentUser.bookings"> <a [routerLink]="['/request', booking._id]">{{booking.city}}</a></li>
+              </ul>
+              <br>
+        </div>
+      </div>
+
+    </tab>
+
+
+    <tab heading="Reviews">
+    <div class="col-xs-8 col-xs-offset-8">
+      <p class="review">Reviews</p>
+    </div>
+    </tab>
+
+
+  </tabset>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="profile-page" *ngIf="currentUser.role === 'TRAVELER'">
+  <div class="container-fluid">
+    <button [routerLink]="['/']">Going somewhere? Get your custom journey schedule!</button>
+  <div class="col-xs-12 ">
+    <img class="image-circle" src="{{currentUser.image}}" />
+      <p id="username">{{ currentUser.name}}</p>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+  <tabset class="tabset" [justified]="true">
+    <tab heading="About">
+       <div class="details">
+         <p>Age: {{ currentUser.age}}</p>
+          <p>Interests: {{ currentUser.interests}}</p>
+          <p>Description: {{ currentUser.description}}</p>
+          <p>Languages: {{ currentUser.languages}}</p>
+
+          <div class="links">
+              <p><button [routerLink]="['avatar']">Add your Profile Picture</button></p>
+              <p><button [routerLink]="['edit']">Add your details</button></p>
+             <p><button [routerLink]="['/']">Going somewhere? Get your custom journey schedule!</button></p>
+          </div>
+
+      </div>
+    </tab>
+    <tab heading="Bookings">
+        <br>
+      <div class="col-xs-12 col-xs-offset-3 ">
+        <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Destination City</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="currentUser.bookings.length">
+              <tr *ngFor="let booking of currentUser.bookings">
+                <td > {{ booking.city&nbsp;}}</td>
+                <td >{{ booking.startDate | date:"yMMMMEEEEd" &nbsp;}}</td>
+                <td >{{ booking.endDate | date:"yMMMMEEEEd" &nbsp;}}</td>
+              </tr>
+             </tbody>
+           </table>
+         </div>
+        </div>
+      </div>
+      </div>
+    </tab>
+
+    <tab heading="Agendas">
+      <div class="col-xs-12 col-xs-offset-6 ">
+        <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Destination City</th>
+                <th>Day</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="currentUser.agendas.length">
+              <tr *ngFor="let agenda of currentUser.agendas">
+                <td ><a [routerLink]="['/agenda', agenda._id]">{{agenda.city&nbsp;}}</a> </td>
+                <td >{{ agenda.day&nbsp;}}</td>
+              </tr>
+             </tbody>
+           </table>
+         </div>
+      </div>
+      <!-- <div *ngIf="currentUser.agendas.length">
+        <ul>
+          <li *ngFor="let agenda of currentUser.agendas"><a [routerLink]="['/']" >{{agenda.city&nbsp;}} Day: {{ agenda.day&nbsp;}}</a> </li>
+        </ul>
+      </div>-->
+    </div>
+</div>
+    </tab>
+
+  </tabset>
+</div>
+</div>
+</div>

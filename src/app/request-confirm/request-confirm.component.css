@@ -1,0 +1,52 @@
+.request-container {
+  /*text-align: center;
+posit  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+  position: relative;
+  text-align: center;
+}
+
+.request-view {
+  background:#193F69;
+  border-radius: 5%;
+  position:absolute;
+  width: 600px;
+  height: 500px;
+  color:#fff;
+  margin-top: 20%;
+  left:50%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.request-button {
+  margin-top: 60px;
+}
+
+.req-but {
+  width: 25%;
+  height: 40px;
+  border-radius: 5%;
+  background-color: white;
+  border: none;
+  color: #193F69;
+}
+
+.req-but:hover {
+  background-color: #82D7C5;
+  color: white;
+  border: none;
+}
+
+.create-form {
+  position:absolute;
+  margin-top: 550px;
+  left: 25%;
+}
+
+#fill-form {
+  margin-top: 10px;
+}

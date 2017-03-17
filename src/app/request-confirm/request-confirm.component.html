@@ -1,0 +1,27 @@
+<div class="request-container">
+<div class="request-view">
+<h3>Request by {{request.name}}</h3>
+
+<p>From: {{request.startDate | date:"yMMMMEEEEd" }}</p>
+<p>To: {{request.endDate | date:"yMMMMEEEEd" }}</p>
+<p>Destination: {{request.city}}</p>
+<p>Who: {{request.whoIsTravelling}}</p>
+<p>Interested in: {{request.mainInterests}}</p>
+<p>Additional info: {{request.mustKnows}}</p>
+
+<div class="request-button">
+<button class="req-but" (click)="removeRequest()"> Delete </button>
+<!-- <button class="btn btn-success"  [routerLink]="['create']">Plan Trip</button> -->
+<button class="req-but" (click)="showComponent()">Plan Trip</button>
+</div>
+
+<p id="fill-form" *ngIf="show">Fill form below</p>
+
+</div>
+
+
+<div class="create-form" *ngIf="show">
+  <app-create-agenda></app-create-agenda>
+</div>
+<!-- <router-outlet></router-outlet> -->
+</div>

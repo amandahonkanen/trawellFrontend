@@ -1,0 +1,17 @@
+
+   <div class= "col-xs-12" >
+
+     <div (collapsed)="collapsed($event)"
+                         [collapse]="isCollapsed"
+                          (expanded)="expanded($event)" class="form">
+
+     <input id="numberDays" #box (keyup.enter)="onEnter(box.value)" placeholder="For how many days? Press enter">
+
+  <div *ngFor="let item of onEnter(value)">
+    <app-agenda-form [quote]="currentUser" [traveler]="traveler" [request]="request"></app-agenda-form>
+  </div>
+
+</div>
+<button type="submit" class="btn btn-default btn-primary" [routerLink]="['/users', currentUser._id]">Finish</button>
+
+</div>

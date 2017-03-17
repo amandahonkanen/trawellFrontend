@@ -1,0 +1,67 @@
+body {
+
+}
+
+/*.agenda-view {
+  text-align: center;
+  /*color: #193F69;*/
+  /*position: relative;
+  background-color: #193F69;
+  background-size: cover;
+}*/
+
+/*.agenda-view {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*opacity: 0.5;*/
+  /*z-index: -1;
+background-color:#193F69;
+background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}*/
+
+.agenda {
+  color: #193F69;
+  width: 60%;
+  border-radius: 5%;
+  background-color: white;
+  border: 10px solid #193F69;
+  padding: 40px;
+  position:absolute;
+  top: 10%;
+  left: 20%;
+  text-align: center;
+}
+
+.dining {
+  padding-top: 20px;
+}
+
+.activity {
+  margin-top: 20px;
+}
+
+.option {
+font-size: 16px;
+}
+
+button {
+  margin-top: 50px;
+  width: 100px;
+  background-color: white;
+  color: #193F69;
+}
+
+button:hover {
+  background-color: #84D7C4;
+  border: none;
+}

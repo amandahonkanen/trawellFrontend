@@ -1,0 +1,138 @@
+.image-circle {
+  height: 170px;
+  width: 170px;
+  margin-top: 50px;
+  margin-left: -90px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 3px 3px 6px rgba(252,252,252,0.7);
+  background-position: center center;
+  z-index: 5;
+}
+
+button{
+  margin-top: 15px;
+  /*width: 25%;
+  height: 40px;*/
+  border-radius: 5%;
+  background-color: #82D7C5;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: #82D7C5;
+  border: none;
+}
+
+span {
+  font-weight: bold;
+}
+
+
+.container-fluid{
+  background-size: cover;
+  margin-top: -20px;
+  height: 400px;
+  background-image: url("/assets/city.jpg");
+}
+
+
+.col-lg-6 {
+  padding-top: 40px;
+}
+
+.col-xs-12{
+  text-align: center;
+}
+
+th{
+  text-align: center;
+}
+
+#username {
+  margin-top: 280px;
+  /*margin-left: 55px;*/
+  font-size: 23px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  /*float: left;*/
+}
+
+#userDescription {
+  font-size: 18px;
+font-family: 'Ubuntu', sans-serif;
+color: lightgray;
+}
+
+#user-name-profile{
+text-transform: uppercase;
+}
+
+
+
+.tabset {
+  margin-top: -40px;
+  float: right;
+}
+
+.details {
+  margin-top: 30px;
+}
+
+
+
+.bookings {
+  margin-top: 20px;
+}
+
+
+.bookings li {
+  margin-bottom: 20px;
+
+}
+
+
+.review {
+  margin-top: 20px;
+}
+
+.links {
+  color: #464775;
+}
+
+
+
+.tab-body{
+  background-color: white;
+      width: 100%;
+      table-layout: fixed;
+}
+
+
+.color {
+  color: black;
+}
+
+
+.details {
+  margin-top: 30px;
+}
+
+
+.itinerary-link {
+  margin-top: 30px;
+}
+
+
+.button {
+  width: 100%;
+}
+
+
+.panel {
+  border: none;
+  width: 50%;
+
+}

@@ -1,0 +1,40 @@
+<!-- col-sm-offset-3 -->
+
+
+  <!-- <div *ngIf="users.city !== cityName">
+    <p>No experts in this location yet! Try a different city!</p>
+  </div> -->
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="userlist-search">
+      <label for="InputName"> </label>
+      <input id="InputName" placeholder="Search by interest..." type="text" [(ngModel)]="pattern">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let user of users | filter: 'interests': pattern; let i = index">
+            <div class="card" *ngIf="user.role == 'EXPERT'">
+              <div id="grad"></div>
+                <div class="avatar">
+                    <img src="{{user.image}}" />
+                </div>
+                <div id="name">  <span>{{ user.name }}</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;{{ user.age }}  </div>
+                <p>
+                   {{ user.interests }}
+                 </p>
+                <p><button type="button" class="btn btn-default" [routerLink]="['/city', user._id]">View Details</button></p>
+                <div class="content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

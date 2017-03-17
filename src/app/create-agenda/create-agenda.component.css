@@ -1,0 +1,16 @@
+#numberDays {
+width: 600px;
+}
+
+button {
+  width: 100px;
+  background-color: white;
+  color: #193F69;
+
+}
+
+button:hover {
+  background-color: #83D7C5;
+  color: white;
+  border: none;
+}
